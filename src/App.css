@@ -1,38 +1,187 @@
-.App {
-  text-align: center;
+body {
+  overflow-x: hidden;
+  padding-top: 50px;
+}
+html {
+  scroll-behavior: smooth;
+}
+.navbar {
+  font-size: 1.5rem;
+  font-weight: 100;
+  background-color: rgba(35, 35, 35, 0.2);
+  margin-bottom: 15px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar .nav-link {
+  color: whitesmoke;
+  font-size: 20px;
+}
+/* nabar scrolled effect*/
+.navbar.scrolled {
+  background: #232323;
+  color: whitesmoke;
+  transition: background 500ms;
+}
+.nav-link {
+  font-family: cursive;
+  font-size: 18px;
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.cool-link::after {
+  display: block;
+  width: 0;
+  content: "";
+  background: white;
+  transition: width 0.3s;
+  height: 2px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.cool-link:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+
+.cartImage {
+  height: 100px;
+  width: 100px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.cartDiv {
+  height: 100px;
+  width: 70%;
+}
+
+.upper {
+  padding-top: 33%;
+  font-size: 40px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Courier New", Courier, monospace;
+  color: whitesmoke;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: flex-end;
+  justify-content: space-around;
+  cursor: pointer;
+}
+/* 
+.men {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center; 
+   background-size: cover;
+   padding-top: 120%;
+  background-repeat: no-repeat;
+}
+ */
+
+.men:hover {
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.2), 5px 5px 50px whitesmoke;
+  transform: scale(1.05);
+  transition: transform 0.5s;
+  border: 1px solid lightgrey;
+}
+.cartBtn {
+  margin: 0 auto;
+  background-color: orangered;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.selector {
+  background-color: lightgrey;
+  color: black;
+}
+.selected {
+  background-color: darkslategrey;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footersection {
+  width: 100%;
+  height: auto;
+  padding: 70px 0 20px 0;
+  background: #2b261d;
+  position: relative;
+}
+
+.footersection p {
+  color: #fff;
+}
+.footersection li a {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.footersection h3 {
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 25px;
+  font-size: 1.2rem !important;
+  font-weight: 600;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.socialbtn {
+  width: 100%;
+  height: 80px;
+  float: left;
+  background-color: rgba(0, 0, 0, 0);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.innersocial {
+  position: relative;
+  display: flex;
+  padding-left: 0;
+}
+
+.socialbtnitem {
+  position: relative;
+  list-style: none;
+}
+.socialbtnlink {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: #383125;
+  line-height: 55px;
+  text-align: center;
+  margin: 0 10px;
+  border-radius: 15px;
+  box-shadow: -2px -2px 3px rgba(255, 255, 255, 0.05),
+    3px 3px 3px rgba(255, 255, 255, 0.2);
+}
+
+.fab {
+  font-size: 20px;
+  color: #555;
+  margin-top: 15px;
+  align-content: center;
+}
+
+.socialbtnlink:hover .fa-telegram-plane {
+  color: #00f3ff;
+  text-shadow: 0 0 15px #00f3ff;
+}
+
+.socialbtnlink:hover .fa-facebook-f {
+  color: #167ee0;
+  text-shadow: 0 0 20px blue;
+}
+
+.socialbtnlink:hover .fa-instagram {
+  color: red;
+  text-shadow: 0 0 15px #00f3ff;
+}
+
+.socialbtnlink:hover .fa-twitter {
+  color: lightblue;
+  text-shadow: 0 0 15px #00f3ff;
 }
