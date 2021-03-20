@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import "./fontAwesome.scss";
+//import "./fontAwesome.scss";
 import Navbar from "./components/navbar";
 import Header from "./components/header";
 //import Slider from "./components/slider";
