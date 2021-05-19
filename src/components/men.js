@@ -31,7 +31,7 @@ const Men = ({ setCart }) => {
       </button>
       <div className="row">
         {data.map((each) => (
-          <div key={each.id} className="col mx-2 p-1 men">
+          <div key={each.id} className="col-6 col-md-3 p-1 men">
             <div
               style={{
                 backgroundImage: `url(${each.image})`,
